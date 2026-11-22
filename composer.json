@@ -1,13 +1,15 @@
 {
     "$schema": "https://getcomposer.org/schema.json",
-    "name": "msbhdn/e-surat",
+    "name": "diskonnekted/e-surat-desa",
     "type": "project",
-    "description": "Sistem manajemen surat elektronik untuk instansi pemerintah, perusahaan swasta, BUMN/BUMD, perguruan tinggi/sekolah, serta organisasi atau individu.",
+    "description": "Sistem tata kelola persuratan dan administrasi digital terpadu untuk Pemerintah Desa, Kelurahan, Gampong, dan Nagari.",
     "keywords": [
         "laravel",
         "inertia",
         "vue",
         "e-surat",
+        "desa",
+        "pemerintah-desa",
         "letter-management",
         "government",
         "indonesia"
@@ -15,14 +17,15 @@
     "license": "MIT",
     "authors": [
         {
-            "name": "e-Surat contributors",
-            "homepage": "https://github.com/msbhdn/e-surat"
+            "name": "Arif Susilo",
+            "email": "arif.susilo@gmail.com",
+            "homepage": "https://github.com/diskonnekted"
         }
     ],
-    "homepage": "https://github.com/msbhdn/e-surat",
+    "homepage": "https://github.com/diskonnekted/e-surat-desa",
     "support": {
-        "issues": "https://github.com/msbhdn/e-surat/issues",
-        "source": "https://github.com/msbhdn/e-surat"
+        "issues": "https://github.com/diskonnekted/e-surat-desa/issues",
+        "source": "https://github.com/diskonnekted/e-surat-desa"
     },
     "require": {
         "php": "^8.3",

@@ -1,15 +1,15 @@
 {
-    "name": "e-surat",
+    "name": "e-surat-desa",
     "private": true,
-    "description": "Sistem manajemen surat elektronik untuk instansi pemerintah, perusahaan swasta, BUMN/BUMD, perguruan tinggi/sekolah, serta organisasi atau individu.",
-    "homepage": "https://github.com/msbhdn/e-surat",
+    "description": "Sistem tata kelola persuratan dan administrasi digital terpadu untuk Pemerintah Desa, Kelurahan, Gampong, dan Nagari.",
+    "homepage": "https://github.com/diskonnekted/e-surat-desa",
     "bugs": {
-        "url": "https://github.com/msbhdn/e-surat/issues"
+        "url": "https://github.com/diskonnekted/e-surat-desa/issues"
     },
     "license": "MIT",
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/msbhdn/e-surat.git"
+        "url": "git+https://github.com/diskonnekted/e-surat-desa.git"
     },
     "type": "module",
     "scripts": {
