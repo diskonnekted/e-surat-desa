@@ -1,0 +1,21 @@
+[Unit]
+Description=e-Surat backup (%i) - database, .env, storage
+Wants=network-online.target
+After=network-online.target docker.service
+
+[Service]
+Type=oneshot
+# Path tidak mengikuti nama instance; ia diatur per server di file env:
+#   /etc/esurat/<instance>.env berisi (baris "KEY=nilai", komentar di baris sendiri):
+#     PROJECT_DIR=/srv/esurat/app
+#     BACKUP_ROOT=/srv/esurat/data/backups
+# Instance bebas dinamai (company-a, esurat, ...). File wajib ada sebelum
+# start pertama: bila hilang, service gagal cepat dengan pesan di jurnal.
+EnvironmentFile=/etc/esurat/%i.env
+# Argumen pertama ExecStart wajib path literal (systemd tidak mengekspansi
+# variabel di posisi executable), jadi /bin/sh yang mengekspansi PROJECT_DIR
+# dari file env di atas; $$ = dolar literal untuk shell.
+# Skrip dipanggil lewat /bin/sh, bukan dieksekusi langsung: bit executable
+# yang hilang (checkout dari Windows) tidak lagi menggagalkan service.
+ExecStart=/bin/sh -c 'exec /bin/sh "$$PROJECT_DIR/deploy/scripts/backup.sh"'
+SyslogIdentifier=esurat-backup-%i
